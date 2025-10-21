@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Estilo Urbano</title>
+  <link rel="stylesheet" href="./CSS/style.css" />
+</head>
+<body>
+  <div id="intro-logo">
+    <img src="./Imagenes de productos/logo.png" alt="Logo Tienda Estilo Urbano" />
+  </div>
+
+  <header class="oculto" id="main-header">
+    <h1>DESKD STUDIO</h1>
+    <nav>
+      <button onclick="tienda.filtrarCategoria('todos')">Todos</button>
+      <button onclick="tienda.filtrarCategoria('camisetas')">Camisetas</button>
+      <button onclick="tienda.filtrarCategoria('pantalones')">Pantalones</button>
+      <button onclick="tienda.filtrarCategoria('accesorios')">Accesorios</button>
+      <button onclick="tienda.verCarrito()">🛒 Carrito (<span id="contadorCarrito">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="catalogo" class="grid-productos"></section>
+    <section id="carrito" class="oculto">
+      <h2>Carrito de Compras</h2>
+      <ul id="listaCarrito"></ul>
+      <p id="totalCarrito"></p>
+      <button onclick="tienda.cerrarCarrito()">Cerrar</button>
+    </section>
+  </main>
+
+  <script type="module" src="./JS/App.js"></script>
+</body>
+</html>
