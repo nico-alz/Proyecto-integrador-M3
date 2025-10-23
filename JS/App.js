@@ -26,3 +26,9 @@ setTimeout(() => {
   document.getElementById("main-header").classList.remove("oculto");
   tienda.mostrarProductos(productos);
 }, 3000);
+window.filtrarDesdeBoton = function (boton, categoria) {
+  tienda.filtrarCategoria(categoria);
+};
+window.mostrarTodosDesdeBoton = function (boton) {
+  tienda.mostrarProductos(productos);
+}

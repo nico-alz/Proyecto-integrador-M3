@@ -14,12 +14,12 @@
   <header class="oculto" id="main-header">
     <h1>DESKD STUDIO</h1>
     <nav>
-      <button onclick="tienda.filtrarCategoria('todos')">Todos</button>
-      <button onclick="tienda.filtrarCategoria('camisetas')">Camisetas</button>
-      <button onclick="tienda.filtrarCategoria('buzos')">Buzos</button>
-      <button onclick="tienda.filtrarCategoria('pantalones')">Pantalones</button>
-      <button onclick="tienda.filtrarCategoria('accesorios')">Accesorios</button>
-      <button onclick="tienda.verCarrito()">🛒 Carrito (<span id="contadorCarrito">0</span>)</button>
+      <button onclick="filtrarDesdeBoton(this, 'todos')">Todos</button>
+      <button onclick="filtrarDesdeBoton(this, 'camisetas')">Camisetas</button>
+      <button onclick="filtrarDesdeBoton(this, 'buzos')">Buzos</button>
+      <button onclick="filtrarDesdeBoton(this, 'pantalones')">Pantalones</button>
+      <button onclick="filtrarDesdeBoton(this, 'accesorios')">Accesorios</button>
+
     </nav>
   </header>
 

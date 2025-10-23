@@ -78,3 +78,7 @@ nav button {
   color: #555;
   margin-bottom: 0.5rem;
 }
+nav button.activo {
+  background-color: #0059ff;
+  color: white;
+}

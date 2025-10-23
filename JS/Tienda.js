@@ -25,14 +25,30 @@ export class Tienda {
 }
 
 
-  filtrarCategoria(categoria) {
-    if (categoria === "todos") {
-      this.mostrarProductos(this.productos);
-    } else {
-      const filtrados = this.productos.filter(p => p.categoria === categoria);
-      this.mostrarProductos(filtrados);
-    }
+filtrarCategoria(categoria) {
+  // Mostrar productos filtrados
+  if (categoria === "todos") {
+    this.mostrarProductos(this.productos);
+  } else {
+    const filtrados = this.productos.filter(p => p.categoria === categoria);
+    this.mostrarProductos(filtrados);
   }
+
+  // Quitar clase 'activo' de todos los botones
+  const botones = document.querySelectorAll("nav button");
+  botones.forEach(btn => btn.classList.remove("activo"));
+
+  // Buscar el botón que coincide con la categoría y agregarle la clase
+  botones.forEach(btn => {
+    const texto = btn.textContent.toLowerCase();
+    if (texto.includes(categoria)) {
+      btn.classList.add("activo");
+    }
+    if (categoria === "todos" && texto.includes("todos")) {
+      btn.classList.add("activo");
+    }
+  });
+}
 
   agregarAlCarrito(id) {
     const producto = this.productos.find(p => p.id === id);
